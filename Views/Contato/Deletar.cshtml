@@ -1,0 +1,42 @@
+@model ProjetoMVC.Models.Contato
+
+@{
+    ViewData["Title"] = "Deletar do contato";
+}
+
+<h1>Deseja realmente deletar esse contato? Essa operação é irreversiǘel</h1>
+
+<hr>
+
+<div>
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(x => x.Nome)
+            </dt>
+        </dt>
+        <dt class="col-sm-10">
+            @Html.DisplayFor(x => x.Nome)
+        </dt>
+         <dt class="col-sm-2">
+            @Html.DisplayNameFor(x => x.Telefone)
+            </dt>
+        </dt>
+        <dt class="col-sm-10">
+            @Html.DisplayFor(x => x.Telefone)
+        </dt>
+         <dt class="col-sm-2">
+            @Html.DisplayNameFor(x => x.Ativo)
+            </dt>
+        </dt>
+        <dt class="col-sm-10">
+            @Html.DisplayFor(x => x.Ativo)
+        </dt>
+    </dl>
+</div>
+
+<form asp-action="Deletar">
+    <input type="sumit" value="Deletar" class="btn-danger"/>
+</form>
+    
+<br>
+<a asp-action="Index">Voltar</a>
